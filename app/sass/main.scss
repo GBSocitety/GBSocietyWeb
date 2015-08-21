@@ -1,0 +1,63 @@
+// Main.scss
+// This file is ONLY for imports and variables
+// see additional variables in bootstrap/_variables.scss
+
+// IMPORTS:
+@import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
+
+// VARIABLES ------------------------------------------------------------------
+
+// FONTS:
+// Montserrat:400,700
+// Roboto:400,300,500,700
+$header-font: 'Montserrat';
+$copy-font: 'Roboto';
+$large-size: 3em;
+$medium-size: 1.8em;
+$small-size: .8em;
+// COLORS:
+$header-color: #fff;
+$copy-color: #000;
+$panel1-color: green;
+// SIZES:
+$bgpanel-height: 100vh;
+
+// MIXINS ---------------------------------------------------------------------
+
+@mixin fonts($family, $weight, $size, $color) {
+  font-family: $family, sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+}
+
+@mixin bgpanel($color, $panel-height) {
+  background-color: $color;
+  height: $panel-height;
+  width: 100%;
+}
+
+body {
+  @include fonts($copy-font, 300, $medium-size, $copy-color);
+}
+
+// PAGE STYLES ------------------------------------------------------------------
+
+// INDEX
+.index-page {
+
+  .header-panel {
+    @include bgpanel($panel1-color, $bgpanel-height);
+    text-align: center;
+    
+    .header {
+      @include fonts($header-font, 700, $large-size, $header-color);
+    }
+  
+  }
+
+  .category-panel {
+    @include bgpanel(blue, 300px);
+  }
+
+}

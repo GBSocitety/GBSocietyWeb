@@ -1,0 +1,20 @@
+{
+  "name": "test",
+  "main": "index.js",
+  "version": "0.0.0",
+  "authors": [
+    "Marcus Tan <marcus.m.tan@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap-sass": "~3.3.5"
+  }
+}
