@@ -9,11 +9,20 @@ block content
       .container-fluid
         .row
           each exec in execs
-            .col-xs-12.col-sm-6.col-md-4
+            .col-xs-12.col-sm-6
               .execs-tile
                 if exec.file
-                  .photo-container(style="background-image:url('/assets/images/execs/#{exec.file}'),url('/assets/images/execs/#{exec.file}')")
+                  .photo-container(style="background-image:url('/assets/images/execs/#{exec.file}')")
+                    .photo-container-accent.div(class="#{exec.type}")
                 else
                   .photo-container
                     .fa.fa-user
+                    .photo-container-accent.div(class="#{exec.type}")
+                .right
+                  .name
+                    .panel-header= exec.name
+                  .position= exec.position
+                  .discipline= exec.discipline
+                  .email= exec.email
+
                 //- img(src='/assets/images/execs/#{exec.file}')

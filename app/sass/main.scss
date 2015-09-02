@@ -4,6 +4,7 @@
 
 // IMPORTS:
 @import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
+@import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables';
 @import './local-variables';
 @import './general';
 
@@ -27,20 +28,23 @@
     @include transition();
     background-color: $light-gray-accent;
     border: 1px solid $dark-gray;
-    margin: 2em;
+    margin: 1em;
     padding: 2em;
 
-    &:hover {
-      background-color: $light-gray;
-
-      .fa-container {
-        border-color: $highlight-color;
-      }
-    
+    .explore {
+      @include transition(.5s);
+      @extend %logistics-text;
+      background-color: $blue;
+      text-transform: uppercase;
+      padding: .8em;
+      position: absolute;
+      opacity: 0;
+      right: 150px;
+      top: 0;
+      
       .fa {
-        color: $highlight-color;
+        padding-left: .5em;
       }
-
     }
 
     .fa-container {
@@ -52,14 +56,32 @@
       height: $icon-size + 5em;
       margin: 0 auto;
       width: $icon-size + 5em;
-    }
+    
+      .fa {
+        @include transition();
+        color: $dark-gray;
+        display: table-cell;
+        font-size: $icon-size;      
+        vertical-align: middle;
+      }
+    }    
 
-    .fa {
-      @include transition();
-      color: $dark-gray;
-      display: table-cell;
-      font-size: $icon-size;      
-      vertical-align: middle;
+    &:hover {
+      background-color: $light-gray;
+
+      .fa-container {
+        border-color: $highlight-color;
+      
+        .fa {
+          color: $highlight-color;
+        }
+      }
+
+      .explore {
+        opacity: 1;
+        right: 10px;
+      }
+
     }
   }
 
@@ -76,17 +98,40 @@
 
   .sponsor-panel {
     @include bgpanel($white);
+    padding: none;
+  }
+
+  .sponsor-description {
+    @extend %logistics-text;
+    background-color: $dark-blue;
+    text-transform: uppercase;
+    line-height: $small-size;
+    padding: $small-spacer;
+  }
+
+  .sponsor-img-container {
+    background-color: $light-gray;
+  }
+
+  .sponsor-img-row {
+    padding: 1em;
   }
 
   .sponsor-img {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 100px;
-    margin: $spacer auto 0;
+    height: 150px;
     position: relative;
-    width: 80%;
   }
+
+@media screen and (min-width: $screen-sm) {
+  .sponsor-img-container, .sponsor-description {
+      float: none;
+      display: table-cell;
+      vertical-align: middle;
+  }
+}
 
 }
 
@@ -193,10 +238,10 @@
       }
 
       .date, .time, .location {
+        @extend %logistics-text;
         float: left;
         padding: 1em 2em;
         text-transform: uppercase;
-        @extend %logistics-text;
       }
 
       .date {
@@ -208,7 +253,7 @@
       }
 
       .location {
-        background-color: $gray;
+        background-color: $blue;
 
         &:hover {
           background-color: $highlight-color;
@@ -218,6 +263,83 @@
   }
 
 }
+
+// JOURNAL
+.journal-page {
+
+  .header-panel {
+    @include bgpanel($light-gray);
+    padding-top: $header-spacer + $spacer;
+
+    a {
+      color: $dark-gray;
+
+      &:hover {
+        color: $highlight-color;
+      }
+    }
+  }
+
+  .journal-panel {
+    @include bgpanel($white);
+  }
+
+  .journal-portal {
+    text-align: center;
+
+    a {      
+      &:hover {
+        color: $header-color;
+
+        .fa-container {
+          background-color: $highlight-color;          
+        }
+
+        .panel-header {
+          color: $highlight-color;
+        }
+      }
+    }
+
+    .panel-header {
+      @include transition();
+    }
+
+    .fa-container {
+      @include transition();
+      background-color: $dark-gray;
+      border-radius: 100%;
+      height: $icon-size + 5em;
+      width: $icon-size + 5em;
+      display: table;
+      margin: 1em auto;
+      padding: $small-spacer;
+    }
+
+    .fa {
+      display: table-cell;
+      vertical-align: middle;
+      font-size: $icon-size;
+    }
+  }
+
+  .journal-blurb {
+    @extend %body-text;
+
+    a {
+      @include transition();
+      background-color: $dark-gray;
+
+      &:hover{
+        color: $header-color;
+        background-color: $highlight-color;
+      }
+
+    }
+  }
+
+}
+
 
 // CONTACT
 .contact-page {
@@ -232,30 +354,62 @@
   }
 
   .execs-tile {
-    margin: 1.5em;
+    @extend %equal-row;
+    margin: 1em;
     background-color: $light-gray;
+    height: $tile-height;
+    width: 100%;
+  }
 
-    .photo-container {
-      border: $border-width solid $dark-gray;
-      border-radius: 100%;
-      display: table;
-      background-color: $light-gray;      
-      background-position: 50% 20%;
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: relative;
-      height: 20vw;
-      margin: 0 auto;
-      width: 20vw;
+  .photo-container {
+    @extend %equal-column;
+    background-color: $light-gray-accent;
+    vertical-align: bottom;
+    text-align: center;
+    background-position: 55% 18%;
+    background-repeat: no-repeat;
+    background-size: 120%;
+    width: 40%;
+    height: 100%;
 
-      .fa {
-        display: table-cell;       
-        vertical-align: middle;
-        font-size: 15vw;
-        text-align: center;
-        color: $dark-gray;
+    .fa {
+      margin-bottom: 20%;
+      font-size: 25vh;
+      text-align: center;
+      color: $dark-gray;
+    }
+
+  }
+
+  .photo-container-accent {
+    @each $position,$color in $positions {
+      &.#{$position} {
+        background-color: $color;
       }
     }
+    height: 2vh;
+    width: 100%;
+  }
+
+  .right {
+    @extend %equal-column;
+    @extend %body-text;
+    vertical-align: top;
+    width: 60%;
+    word-wrap: break-word;
+    // border-left: $border-width solid $dark-gray;
+
+    .name {
+      padding: .5em;
+      background-color: $dark-gray;
+      text-align: center;
+
+      .panel-header {
+        color: $header-color;
+        font-size: $medium-size;
+      }
+    }
+
   }
 
 }

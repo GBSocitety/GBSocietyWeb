@@ -12,6 +12,9 @@ block content
             .col-xs-12.col-sm-6.col-md-4
               a(href='/rex')
                 .event-tile
+                  .explore
+                    | explore 
+                    .fa.fa-arrow-right
                   .fa-container
                     .fa.fa-search
                   .event-description
@@ -20,29 +23,33 @@ block content
             .col-xs-12.col-sm-6.col-md-4
               a(href='/events')
                 .event-tile
+                  .explore
+                    | explore 
+                    .fa.fa-arrow-right
                   .fa-container
                     .fa.fa-calendar-check-o
                   .event-description
                     .panel-header GS Events
                     .description Workshops and Symposiums throughout the year help to build useful academic skills and discover innovative research topics
+                      | asdfasdf asdfas dfas dfsadfa sdadfsasdf asdadfa sdasd fasdfasdf
             .col-xs-12.col-sm-6.col-md-4
               a(href='/journal')
                 .event-tile
+                  .explore
+                    | explore 
+                    .fa.fa-arrow-right
                   .fa-container
                     .fa.fa-book
                   .event-description
                     .panel-header Undergrad Journal
                     .description The first peer-reviewed undergraduate journal for engineers displays student research taking place at UofT
     .sponsor-panel.text-center
-      //- .sub-header Sponsors
-      //- .sub-header-copy The Galbraith Society would like to thank their sponsors for all of their support.
       .container-fluid
         .row
-          .col-xs-12.col-sm-4
+          .col-xs-12.col-sm-4.sponsor-description
             | The Galbraith Society would like to thank their sponsors for all of their support.
-          .col-xs-12.col-sm-8
-            .container-fluid
-              .row
-                each img in sponsors
-                  .col-xs-12.col-sm-6.col-md-4
-                    .sponsor-img(style="background-image:url('/assets/images/sponsors/#{img}')")
+          .col-xs-12.col-sm-8.sponsor-img-container
+            .row
+              each img in sponsors
+                .col-xs-12.col-sm-6.col-md-4.sponsor-img-row
+                  .sponsor-img(style="background-image:url('/assets/images/sponsors/#{img}')")

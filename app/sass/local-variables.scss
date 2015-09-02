@@ -21,6 +21,7 @@ $small-size: 1.2em;
 $medium-size: 1.5em;
 $large-size: 5em;
 
+$tile-height: 35vh;
 $border-width: .5em;
 $bgpanel-height: 100vh;
 $nav-height: 10vh;
@@ -31,3 +32,10 @@ $header-spacer: $medium-size + 2em;
 $buffer: 3em;
 // MISC
 $prefixes: webkit moz ms o;
+$positions: (
+  'co-chair': $blue,
+  'events': green,
+  'rex': yellow,
+  'journal': red,
+  'misc': blue
+);

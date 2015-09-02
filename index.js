@@ -22,6 +22,11 @@ app.get('/events', function (req, res) {
   res.render('events', { title: 'Events', events: events});
 });
 
+app.get('/journal', function (req, res) {
+  res.render('journal', { title: 'Undergraduate Journal'});
+});
+
+
 app.get('/contact', function (req, res) {
   res.render('contact', { title: 'Contact', execs: execs});
 });

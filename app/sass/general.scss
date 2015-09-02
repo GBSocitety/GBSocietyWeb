@@ -22,8 +22,8 @@
   #{$property}: #{$value};
 }
 
-@mixin transition($property: all, $delay: .5s, $timing: ease) {
-  $value: $property $delay $timing;
+@mixin transition($delay: 0s, $property: all, $duration: .5s, $timing: ease) {
+  $value: $property $duration $timing $delay;
   // use default prefixes
   @include build-prefix-values('transition', $value);
 }
@@ -58,8 +58,28 @@ a {
   }
 }
 
+.highlight-text {
+  @extend %logistics-text;
+  display: inline-block;
+  background-color: $highlight-color;
+  margin: 1em auto;
+  padding: .5em $small-spacer;
+  text-transform: uppercase;
+}
+
 .category-panel {
   padding: $spacer 0;
+}
+
+%equal-row {
+  display: table;
+  border: none;
+}
+
+%equal-column {
+  float: none;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 // BIG HEADER
@@ -82,7 +102,7 @@ a {
 }
 
 .panel-header {
-  @include fonts($header-font, 400, $medium-size + .5em, $dark-gray);
+  @include fonts($header-font, 400, $medium-size + .5em, $copy-color);
 }
 
 %body-text {
@@ -93,12 +113,15 @@ a {
   @include fonts($copy-font, 700, $small-size, $header-color);
 }
 
+%nav-text {
+  @include fonts($copy-font, 400, $medium-size, $header-color);
+  letter-spacing: .5px;
+}
+
 .nav-bar {
-  @extend .header-copy;
+  @extend %nav-text;
   @include transition();
   background-color: $gray;
-  color: $header-color;
-  font-weight: 400;  
   position: fixed;
   width: 100%;
   z-index: 1000;
@@ -123,11 +146,17 @@ a {
 
 .footer {
   @include bgpanel($gray);
-  position: static;
-  bottom: 0;
+  @extend %body-text;
+  padding: $small-spacer $small-spacer $spacer;
+  border-left: $spacer solid $dark-gray;
+  color: $header-color;
+
+  .pull-left .fa {
+    padding: 0 .5em;
+  }
 
   .pull-right .fa {
-    font-size: 1.3em;
+    font-size: $small-size;
     margin: 0 .5em;
   }
 }
