@@ -1,0 +1,133 @@
+@import './local-variables';
+
+// MIXINS ---------------------------------------------------------------------
+@mixin fonts($family, $weight, $size, $color) {
+  font-family: $family, sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+}
+
+@mixin bgpanel($color, $panel-height: auto) {
+  padding: $spacer $buffer;
+  background-color: $color;
+  height: $panel-height;
+  width: 100%;
+}
+
+@mixin build-prefix-values($property, $value) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: #{$value};
+  }
+  #{$property}: #{$value};
+}
+
+@mixin transition($property: all, $delay: .5s, $timing: ease) {
+  $value: $property $delay $timing;
+  // use default prefixes
+  @include build-prefix-values('transition', $value);
+}
+
+@mixin bgimage-gradient($img, $top, $bottom) {
+  @each $prefix in $prefixes {
+    background: #{$prefix}-linear-gradient(rgba(0, 0, 0, $top), rgba(0, 0, 0, $bottom)), url('images/#{$img}') center center no-repeat;
+  }
+  background: linear-gradient(rgba(0, 0, 0, $top), rgba(0, 0, 0, $bottom)), url('images/#{$img}') center center no-repeat;
+}
+
+// GENERAL STYLES ---------------------------------------------------------------------
+
+
+body {
+  border: 0;
+  font-family: $copy-font, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+a {
+  color: $header-color;
+
+  &:link {
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: $highlight-color;
+  }
+}
+
+.category-panel {
+  padding: $spacer 0;
+}
+
+// BIG HEADER
+.header {
+  @include fonts($header-font, 700, $large-size, $header-color);
+}
+
+.header-copy {
+  @include fonts($copy-font, 300, $medium-size, $header-color);
+  letter-spacing: .5px;
+}
+
+// SMALLER HEADER
+.sub-header {
+  @include fonts($header-font, 700, $large-size - .5em, $copy-color);
+}
+
+.sub-header-copy {
+  @include fonts($copy-font, 300, $medium-size - .1em, $copy-color);
+}
+
+.panel-header {
+  @include fonts($header-font, 400, $medium-size + .5em, $dark-gray);
+}
+
+%body-text {
+  @include fonts($copy-font, 300, $small-size, $copy-color);
+}
+
+%logistics-text {
+  @include fonts($copy-font, 700, $small-size, $header-color);
+}
+
+.nav-bar {
+  @extend .header-copy;
+  @include transition();
+  background-color: $gray;
+  color: $header-color;
+  font-weight: 400;  
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+
+  .left {
+    float: left;
+  }
+
+  .right {
+    float: right;
+  }
+
+  .item {
+    display: inline-block;    
+    margin: .5em;
+
+    &:hover a {
+      color: $highlight-color;
+    }
+  }
+}
+
+.footer {
+  @include bgpanel($gray);
+  position: static;
+  bottom: 0;
+
+  .pull-right .fa {
+    font-size: 1.3em;
+    margin: 0 .5em;
+  }
+}

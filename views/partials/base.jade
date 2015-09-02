@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    title!= title
+    link(rel='stylesheet', href='/assets/app.css')
+    link(href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,300,500,700', rel='stylesheet', type='text/css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
+
+  body
+    .nav-bar
+      .container-fluid
+        .left
+          .item
+            a(href='/')
+              .fa.fa-home
+        .right
+          each item in ['REX', 'Events', 'Journal', 'Contact']
+            .item
+              a(href='/#{item.toLowerCase()}')= item
+    block content
+    .footer
+      .pull-left
+        .fa.fa-copyright
+        | 2013-2015 The Galbraith Society
+      .pull-right
+        a(href='mailto:gsociety.uoft@gmail.com' target='_blank')
+          .fa.fa-envelope
+        a(href='https://twitter.com/gb_society' target='_blank')
+          .fa.fa-twitter-square
+        a(href='https://www.facebook.com/GalbraithSociety' target='_blank')
+          .fa.fa-facebook-square
+
+
+    script(src='/assets/app.js')
+    script(src='/vendor/jquery/dist/jquery.js')
+

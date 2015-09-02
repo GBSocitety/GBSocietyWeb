@@ -1,0 +1,19 @@
+extends ./partials/base.jade
+
+block content
+  .contact-page
+    .header-panel.text-center
+      .sub-header Contact
+      .sub-header-copy The Galbraith Society is run by passionate engineering students who want to improve academic opportunities at UofT. Our team is structured into three groups, each focused on one of our initiatives.
+    .execs-panel
+      .container-fluid
+        .row
+          each exec in execs
+            .col-xs-12.col-sm-6.col-md-4
+              .execs-tile
+                if exec.file
+                  .photo-container(style="background-image:url('/assets/images/execs/#{exec.file}'),url('/assets/images/execs/#{exec.file}')")
+                else
+                  .photo-container
+                    .fa.fa-user
+                //- img(src='/assets/images/execs/#{exec.file}')

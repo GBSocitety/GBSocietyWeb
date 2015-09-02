@@ -1,0 +1,79 @@
+[
+  {
+    "file": "areeba.jpg",
+    "name": "Areeba Zakir",
+    "position": "Co-Chair",
+    "discipline": "IndE 1T6 + PEY",
+    "email": "gsociety.uoft@gmail.com"
+  },
+  {
+    "file": "asim.jpg",
+    "name": "Asim Datye",
+    "position": "Co-Chair",
+    "discipline": "CHEM 1T7",
+    "email": "gsociety.uoft@gmail.com"
+  },
+  {
+    "file": "yufan.jpg",
+    "name": "Yufan Li",
+    "position": "Co-Director of Events",
+    "discipline": "EngSci 1T7",
+    "email": "gsociety.events@gmail.com"
+  },
+  {
+    "file": "",
+    "name": "Andrew Tan",
+    "position": "Co-Director of Events",
+    "discipline": "EngSci 1T8",
+    "email": "gsociety.events@gmail.com"
+  },
+  {
+    "file": "harshita.jpg",
+    "name": "Harshita Huria",
+    "position": "Co-Director of REX",
+    "discipline": "ECE 1T7",
+    "email": "gsociety.rex@gmail.com"
+  },
+  {
+    "file": "imran.jpg",
+    "name": "Imran Asghar",
+    "position": "Co-Director of REX",
+    "discipline": "ECE 1T8",
+    "email": "gsociety.rex@gmail.com"
+  },
+  {
+    "file": "meghana.jpg",
+    "name": "Meghana Padmanabhan",
+    "position": "REX Subcommitee",
+    "discipline": "ECE 1T7",
+    "email": "gsociety.operations@gmail.com"
+  },
+  {
+    "file": "abhinav.jpg",
+    "name": "Abhinav Mohan",
+    "position": "Co-Director of Journal",
+    "discipline": "CHEM 1T8",
+    "email": "gsociety.journal@gmail.com"
+  },
+  {
+    "file": "daniel.jpg",
+    "name": "Daniel Eftekhari",
+    "position": "Co-Director of Journal",
+    "discipline": "EngSci 1T6",
+    "email": "gsociety.journal@gmail.com"
+  },
+  {
+    "file": "sowmya.jpg",
+    "name": "Sowmya Tata",
+    "position": "Director of Promotions",
+    "discipline": "EngSci 1T7",
+    "email": "gsociety.promotions@gmail.com"
+  },
+  {
+    "file": "",
+    "name": "Marcus Tan",
+    "position": "Webmaster",
+    "discipline": "Compsci 1T8",
+    "email": "gsociety.webmaster@gmail.com"
+  }
+]

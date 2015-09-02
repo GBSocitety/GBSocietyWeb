@@ -1,15 +1,48 @@
-extends ./base.jade
+extends ./partials/base.jade
 
 block content
   .index-page
-    .header-panel
-      .header Galbraith Society
-      .description hello?
-    .category-panel
+    .header-panel.text-center
+      .title-panel
+        .header Galbraith Society
+        .header-copy Promoting Undergraduate Engineering Research
+      .category-panel
+        .container-fluid
+          .row
+            .col-xs-12.col-sm-6.col-md-4
+              a(href='/rex')
+                .event-tile
+                  .fa-container
+                    .fa.fa-search
+                  .event-description
+                    .panel-header REX Program
+                    .description Explore a field of research by working directly with an academic leader on a project during the school year
+            .col-xs-12.col-sm-6.col-md-4
+              a(href='/events')
+                .event-tile
+                  .fa-container
+                    .fa.fa-calendar-check-o
+                  .event-description
+                    .panel-header GS Events
+                    .description Workshops and Symposiums throughout the year help to build useful academic skills and discover innovative research topics
+            .col-xs-12.col-sm-6.col-md-4
+              a(href='/journal')
+                .event-tile
+                  .fa-container
+                    .fa.fa-book
+                  .event-description
+                    .panel-header Undergrad Journal
+                    .description The first peer-reviewed undergraduate journal for engineers displays student research taking place at UofT
+    .sponsor-panel.text-center
+      //- .sub-header Sponsors
+      //- .sub-header-copy The Galbraith Society would like to thank their sponsors for all of their support.
       .container-fluid
         .row
-          .col-xs-12.col-sm-6
-            | sdfgsdfgsdfg
-          .col-xs-12.col-sm-6
-            | adsfasdfasdf
-            a(href='/team') team
+          .col-xs-12.col-sm-4
+            | The Galbraith Society would like to thank their sponsors for all of their support.
+          .col-xs-12.col-sm-8
+            .container-fluid
+              .row
+                each img in sponsors
+                  .col-xs-12.col-sm-6.col-md-4
+                    .sponsor-img(style="background-image:url('/assets/images/sponsors/#{img}')")

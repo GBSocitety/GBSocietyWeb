@@ -19,7 +19,7 @@ gulp.task('styles', function () {
 		.pipe($.sass())
         .pipe($.concat('app.css'))
 		.pipe($.cssmin())
-		.pipe(gulp.dest('dist/assets'))
+		.pipe(gulp.dest('dist'))
         .pipe(reload({stream:true}));
 });
 
@@ -30,7 +30,7 @@ gulp.task('scripts', function () {
         .pipe($.jshint.reporter(require('jshint-stylish')))
         .pipe($.concat('app.js'))
         .pipe($.uglify())
-        .pipe(gulp.dest('dist/assets'))
+        .pipe(gulp.dest('dist'))
         .pipe(reload({stream:true}));
 });
 

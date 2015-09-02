@@ -4,42 +4,8 @@
 
 // IMPORTS:
 @import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
-
-// VARIABLES ------------------------------------------------------------------
-
-// FONTS:
-// Montserrat:400,700
-// Roboto:400,300,500,700
-$header-font: 'Montserrat';
-$copy-font: 'Roboto';
-$large-size: 3em;
-$medium-size: 1.8em;
-$small-size: .8em;
-// COLORS:
-$header-color: #fff;
-$copy-color: #000;
-$panel1-color: green;
-// SIZES:
-$bgpanel-height: 100vh;
-
-// MIXINS ---------------------------------------------------------------------
-
-@mixin fonts($family, $weight, $size, $color) {
-  font-family: $family, sans-serif;
-  font-weight: $weight;
-  font-size: $size;
-  color: $color;
-}
-
-@mixin bgpanel($color, $panel-height) {
-  background-color: $color;
-  height: $panel-height;
-  width: 100%;
-}
-
-body {
-  @include fonts($copy-font, 300, $medium-size, $copy-color);
-}
+@import './local-variables';
+@import './general';
 
 // PAGE STYLES ------------------------------------------------------------------
 
@@ -47,17 +13,250 @@ body {
 .index-page {
 
   .header-panel {
-    @include bgpanel($panel1-color, $bgpanel-height);
-    text-align: center;
-    
-    .header {
-      @include fonts($header-font, 700, $large-size, $header-color);
+    @include bgimage-gradient('bg.jpg', .75, 0);
+    background-size: cover;
+    height: auto;
+    min-height: $bgpanel-height;
+
+    .title-panel {
+      padding-top: $header-spacer + $spacer;
     }
-  
   }
 
-  .category-panel {
-    @include bgpanel(blue, 300px);
+  .event-tile {
+    @include transition();
+    background-color: $light-gray-accent;
+    border: 1px solid $dark-gray;
+    margin: 2em;
+    padding: 2em;
+
+    &:hover {
+      background-color: $light-gray;
+
+      .fa-container {
+        border-color: $highlight-color;
+      }
+    
+      .fa {
+        color: $highlight-color;
+      }
+
+    }
+
+    .fa-container {
+      @include transition();
+      background-color: $header-color;
+      border: $border-width solid $dark-gray;
+      border-radius: 100%;
+      display: table;
+      height: $icon-size + 5em;
+      margin: 0 auto;
+      width: $icon-size + 5em;
+    }
+
+    .fa {
+      @include transition();
+      color: $dark-gray;
+      display: table-cell;
+      font-size: $icon-size;      
+      vertical-align: middle;
+    }
+  }
+
+  .event-description {
+    margin: 10px 0;
+
+    .description {
+      @extend %body-text;
+      border-top: .2em solid $dark-gray;
+      margin: 10px;
+      padding-top: 10px;
+    }
+  }
+
+  .sponsor-panel {
+    @include bgpanel($white);
+  }
+
+  .sponsor-img {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100px;
+    margin: $spacer auto 0;
+    position: relative;
+    width: 80%;
   }
 
 }
+
+// EVENTS
+.event-page {
+
+  .header-panel {
+    @include bgpanel($light-gray);
+    padding-top: $header-spacer + $spacer;
+  }
+
+  .event-panel {
+    @include bgpanel($white);
+  }
+
+  .event-tile {
+    display: table;
+    margin: $small-spacer auto;
+    min-height: 200px;
+    width: 85vw;
+
+    .event-row {
+      display: table-row;
+    }
+
+    .left {
+      @include transition();
+      display: table-cell;
+      vertical-align: top;
+      padding: 0 $small-spacer 1em;
+      text-align: right;
+      width: 30%;
+      border-right: $border-width solid $dark-gray;
+
+      .rsvp {
+        @include transition();
+        opacity: 1;
+        @extend %logistics-text;
+        text-transform: uppercase;
+        margin-top: 1em;
+        float: right;
+        color: $highlight-color;
+      }
+
+      .rsvp-circle {
+        @include transition();
+        opacity: 0;
+        display: table;
+        float: right;
+        margin-right: -$icon-size + 1em;
+        margin-top: 1em;
+        border: $border-width solid $header-color;
+        color: $header-color;
+        border-radius: 100%;
+        height: $icon-size;
+        width: $icon-size;
+
+        .fa {
+          display: table-cell;       
+          vertical-align: middle;
+          font-size: $icon-size - 2em;
+          text-align: center;
+        }
+      }
+
+      &:hover {
+        background-color: $highlight-color;
+        border-width: 0;
+        padding-top: 1em;
+
+        .panel-header {
+          color: $header-color;
+        }
+
+        .rsvp {
+          opacity: 0;
+        }
+
+        .rsvp-circle{
+          opacity: 1;
+        }
+      }
+
+    }
+
+    .right {
+      display: table-cell;
+
+      .description {
+        @extend %body-text;
+        @include transition();
+        min-height: 160px;
+        background-color: $light-gray;
+        padding: 1em;
+        height: 100%;
+      }
+    }
+
+    .logistics {
+
+      .fa {
+        font-size: $small-size;
+        padding-right: 1em;
+      }
+
+      .date, .time, .location {
+        float: left;
+        padding: 1em 2em;
+        text-transform: uppercase;
+        @extend %logistics-text;
+      }
+
+      .date {
+        background-color: $dark-gray;
+      }
+
+      .time {
+        background-color: $dark-blue;
+      }
+
+      .location {
+        background-color: $gray;
+
+        &:hover {
+          background-color: $highlight-color;
+        }
+      }
+    }
+  }
+
+}
+
+// CONTACT
+.contact-page {
+
+  .header-panel {
+    @include bgpanel($light-gray);
+    padding-top: $header-spacer + $spacer;
+  }
+
+  .execs-panel {
+    @include bgpanel($white);
+  }
+
+  .execs-tile {
+    margin: 1.5em;
+    background-color: $light-gray;
+
+    .photo-container {
+      border: $border-width solid $dark-gray;
+      border-radius: 100%;
+      display: table;
+      background-color: $light-gray;      
+      background-position: 50% 20%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      height: 20vw;
+      margin: 0 auto;
+      width: 20vw;
+
+      .fa {
+        display: table-cell;       
+        vertical-align: middle;
+        font-size: 15vw;
+        text-align: center;
+        color: $dark-gray;
+      }
+    }
+  }
+
+}
+

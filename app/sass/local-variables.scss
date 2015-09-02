@@ -1,0 +1,33 @@
+// VARIABLES ------------------------------------------------------------------
+// FONTS:
+// Montserrat:400,700
+// Roboto:300,400,500,700
+$header-font: 'Montserrat';
+$copy-font: 'Roboto';
+// COLORS:
+$gray: #435158;
+$dark-gray: #282725;
+$light-gray: #f4f4f4;
+$light-gray-accent: darken($light-gray, 15%);
+$white: #fff;
+$blue: #5c97bf;
+$dark-blue: #012833;
+$ruby: #a20b28;
+$header-color: #fff;
+$copy-color: $dark-gray;
+$highlight-color: $ruby;
+// SIZES:
+$small-size: 1.2em;
+$medium-size: 1.5em;
+$large-size: 5em;
+
+$border-width: .5em;
+$bgpanel-height: 100vh;
+$nav-height: 10vh;
+$icon-size: 4em;
+$spacer: 3.5em;
+$small-spacer: 2em;
+$header-spacer: $medium-size + 2em;
+$buffer: 3em;
+// MISC
+$prefixes: webkit moz ms o;
