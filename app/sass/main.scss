@@ -253,6 +253,7 @@
       }
 
       .location {
+        @include transition();
         background-color: $blue;
 
         &:hover {
@@ -282,10 +283,23 @@
 
   .journal-panel {
     @include bgpanel($white);
+    z-index: 0;
+  }
+
+  .slide-in {
+    @include transition();
+    z-index: 50;
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    top: 0;
+    left: -80%;
+    background-color: $blue;
   }
 
   .journal-portal {
     text-align: center;
+    padding: 1em;
 
     a {      
       &:hover {
@@ -295,10 +309,25 @@
           background-color: $highlight-color;          
         }
 
-        .panel-header {
-          color: $highlight-color;
+        .fa-arrow-up {
+          opacity: 1;
+          left: 30%;
+        }
+
+        .fa-book {
+          opacity: 0;
+          left: 90%
+        }
+
+        .slide-in {
+          left: 10%;
         }
       }
+    }
+
+    .panel-header, .fa-container {
+      position: relative;
+      z-index: 100;
     }
 
     .panel-header {
@@ -311,15 +340,24 @@
       border-radius: 100%;
       height: $icon-size + 5em;
       width: $icon-size + 5em;
-      display: table;
       margin: 1em auto;
       padding: $small-spacer;
     }
 
     .fa {
-      display: table-cell;
-      vertical-align: middle;
+      @include transition();
+      position: absolute;
+      top: 25%;
       font-size: $icon-size;
+    }
+
+    .fa-book {
+      left: 30%;
+    }
+
+    .fa-arrow-up {
+      left: -60%;
+      opacity: 0;
     }
   }
 
