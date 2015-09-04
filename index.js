@@ -71,6 +71,6 @@ app.get('/contact', function (req, res) {
   res.render('contact', { title: 'Contact', execs: execs});
 });
 
-app.listen('4000', function(){
-	console.log('listening on 4000');
+app.listen('process.env.PORT || 4000', function(){
+	console.log('listening');
 });
