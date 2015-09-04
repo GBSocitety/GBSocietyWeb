@@ -16,8 +16,7 @@
   .header-panel {
     @include bgimage-gradient('bg.jpg', .75, 0);
     background-size: cover;
-    height: auto;
-    min-height: $bgpanel-height;
+    min-height: 40vh;
 
     .title-panel {
       padding-top: $header-spacer + $spacer;
@@ -31,8 +30,12 @@
     margin: 1em;
     padding: 2em;
 
+    .panel-header {
+      font-size: 2em;
+    }
+
     .explore {
-      @include transition(.5s);
+      @include transition();
       @extend %logistics-text;
       background-color: $blue;
       text-transform: uppercase;
@@ -78,6 +81,7 @@
       }
 
       .explore {
+        @include transition(.5s);
         opacity: 1;
         right: 10px;
       }
@@ -97,7 +101,7 @@
   }
 
   .sponsor-panel {
-    @include bgpanel($white);
+    @include bgpanel($header-color);
     padding: none;
   }
 
@@ -109,10 +113,6 @@
     padding: $small-spacer;
   }
 
-  .sponsor-img-container {
-    background-color: $light-gray;
-  }
-
   .sponsor-img-row {
     padding: 1em;
   }
@@ -121,7 +121,7 @@
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 150px;
+    min-height: 20vh;
     position: relative;
   }
 
@@ -133,10 +133,20 @@
   }
 }
 
+  .mailing-list-panel {
+    @include bgpanel($light-gray);
+    min-height: 40vh;  
+  }
+
+  .sign-up {
+    padding-top: 1em;
+  }
+
 }
 
 // EVENTS
 .event-page {
+  min-height: $bgpanel-height;
 
   .header-panel {
     @include bgpanel($light-gray);
@@ -265,8 +275,214 @@
 
 }
 
+// REX
+.rex-page {
+  min-height: $bgpanel-height;
+
+  .header-panel {
+    @include bgpanel($light-gray);
+    padding-top: $header-spacer + $spacer;
+  }
+
+  .rex-panel {
+    @include bgpanel($white);
+  }
+
+  .project-tile {
+    border-collapse: collapse;
+    background-color: $light-gray;
+    height: $tile-height;
+    width: 100%;
+    margin: 1em;
+    padding: 0;
+
+    &:hover {
+
+      .title-container {
+        @include transition(.7s);
+        background-position: left;        
+      }
+
+      .title {
+        @include transition(.7s);
+        color: $header-color;
+      }
+
+      .bottom-accent {
+        @include transition(.7s);
+        background-position: left;
+      }
+    }
+  }
+
+  .title-container{
+    @include transition();
+    // background-color: $light-gray-accent;
+    background: linear-gradient(to right, $highlight-color 50%, $light-gray-accent 50%);
+    background-size: 200% 100%;
+    background-position: right;    
+    text-align: center;
+    height: $tile-height;
+    width: 100%;
+  }
+
+  .title {
+    @include transition();    
+    color: $dark-gray;
+    width: 100%;
+    padding: .5em;
+  }
+
+  .bottom-container {
+    @extend %body-text;      
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .area {
+    @each $area,$color in $areas {
+      &.#{$area} {
+        background-color: $color;
+      }
+    }
+
+    color: $header-color;
+    width: 65%;
+    padding: 1em;
+  }
+
+  .prof {
+    width: 35%;
+  }
+
+  .bottom-accent {
+    @include transition();    
+    height: $border-width;
+    background: linear-gradient(to right, $gray 50%, $dark-gray 50%);
+    background-size: 200% 100%;
+    background-position: right;
+  }
+}
+
+// PROJECT
+.project-page {
+  min-height: $bgpanel-height;
+
+  .nav-back {
+    @extend %nav-text;
+    @include transition();
+    // position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .back-btn {
+    float: left;
+    background-color: $dark-gray;
+    padding: 1em;
+
+    .fa {
+      color: $dark-gray;
+    }
+  }
+
+  .header-panel {
+    @include bgpanel($gray);
+
+    .sub-header {
+      color: $header-color;
+    }
+
+    .highlight-text {
+      @each $area,$color in $areas {
+        &.#{$area} {
+          background-color: $color;
+        }
+      }
+    }
+  }
+
+  .description-panel {
+    @extend %body-text;
+    @include bgpanel($light-gray)
+  }
+
+  .info-panel {
+    @extend %body-text;
+    @include bgpanel($white);
+    padding-top: 1em;
+  }
+
+  .middle-info {
+    margin: 1em 0;
+
+    .panel-header {
+      font-size: $small-size;
+    }
+  }
+
+  .prof-panel {
+    @include transition();
+    background-color: $light-gray-accent;
+    color: $dark-gray;
+    margin: 1em 0;
+    padding: 1em;
+    min-height: 150px;
+    height: auto;
+    width: 100%;
+
+    .prof-photo {
+      background-position: 55% 15%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 30%;
+    }
+
+    .right {
+      @include transition();
+      width: 70%;
+      padding: 1em;
+      vertical-align: top;
+      border-left: $border-width solid $dark-gray;
+    }
+
+    .panel-header {
+      @include transition();
+    }
+
+    &:hover {
+
+      background-color: $highlight-color;
+
+      .right {
+        border-width: 0;
+        color: $header-color;
+      }
+
+      .panel-header {
+        color: $header-color;
+      }
+
+    }
+
+  }
+
+  .student-panel {
+    background-color: $light-gray-accent;
+    text-align: center;    
+    margin: 1em 0;
+    padding: 1em;
+    min-height: 150px;
+    height: auto;
+    width: 100%;
+  }
+
+}
+
 // JOURNAL
 .journal-page {
+  min-height: $bgpanel-height;
 
   .header-panel {
     @include bgpanel($light-gray);
@@ -277,6 +493,14 @@
 
       &:hover {
         color: $highlight-color;
+      }
+    }
+
+    .highlight-text {
+      background-color: $highlight-color;
+
+      &:hover {
+        background-color: lighten($highlight-color, 10%);
       }
     }
   }
@@ -363,17 +587,6 @@
 
   .journal-blurb {
     @extend %body-text;
-
-    a {
-      @include transition();
-      background-color: $dark-gray;
-
-      &:hover{
-        color: $header-color;
-        background-color: $highlight-color;
-      }
-
-    }
   }
 
 }
@@ -381,6 +594,7 @@
 
 // CONTACT
 .contact-page {
+  min-height: $bgpanel-height;
 
   .header-panel {
     @include bgpanel($light-gray);
@@ -392,62 +606,131 @@
   }
 
   .execs-tile {
-    @extend %equal-row;
     margin: 1em;
     background-color: $light-gray;
-    height: $tile-height;
+    table-layout: fixed;
     width: 100%;
   }
 
   .photo-container {
-    @extend %equal-column;
-    background-color: $light-gray-accent;
-    vertical-align: bottom;
+    background-color: $light-gray;
+    border: 1px solid $dark-gray;
     text-align: center;
-    background-position: 55% 18%;
+    background-position: 55% 15%;
     background-repeat: no-repeat;
-    background-size: 120%;
-    width: 40%;
-    height: 100%;
+    background-size: cover;
+    vertical-align: bottom;
+    width: 35%;
 
     .fa {
-      margin-bottom: 20%;
-      font-size: 25vh;
+      font-size: 10em;
+      margin-bottom: 8vh;
       text-align: center;
       color: $dark-gray;
     }
 
   }
 
-  .photo-container-accent {
+  .right {
+    vertical-align: top;
+    width: 65%;
+
+    @each $position,$color in $positions {
+      &.#{$position} {
+        border-left: $border-width solid $color;
+      }
+    }
+  }
+
+  .name {
+    padding: .5em;
+    background-color: $dark-gray;
+    text-align: center;
+    white-space: nowrap;
+
+    .panel-header {
+      color: $header-color;
+    }
+  }
+
+  .position {
+    @extend %body-text;
+    color: $header-color;
+    text-align: center;
+    padding: .5em;
+
     @each $position,$color in $positions {
       &.#{$position} {
         background-color: $color;
       }
     }
-    height: 2vh;
-    width: 100%;
   }
 
-  .right {
-    @extend %equal-column;
-    @extend %body-text;
-    vertical-align: top;
-    width: 60%;
-    word-wrap: break-word;
-    // border-left: $border-width solid $dark-gray;
+  .top {
+    display: table;
+    text-align: center;
+    background-color: $header-color;
+    border-radius: 100%;
+    height: $icon-size + .5em;
+    width: $icon-size + .5em;
+    margin: 0 auto;
 
-    .name {
-      padding: .5em;
-      background-color: $dark-gray;
+    .fa {
+      display: table-cell;
+      color: $dark-gray;
+      vertical-align: middle;
+      font-size: $icon-size - 1.5em;
+    }
+  }
+
+  .discipline {
+    background-color: $light-gray-accent;
+    border-bottom: 1px solid $light-gray-accent;    
+    float: left;
+    width: 50%;
+    padding: 1em;
+
+    .bottom {
+      @extend %logistics-text;
+      padding-top: 1em;
       text-align: center;
+      color: $dark-gray;
+    }
+  }
 
-      .panel-header {
+  .email {
+    @include transition();
+    border-right: 1px solid $light-gray-accent;
+    border-bottom: 1px solid $light-gray-accent;
+    text-align: center;
+    float: left;
+    width: 50%;
+    height: 100%;
+    padding: 1em;
+    // word-wrap: break-word;
+
+    .fa {
+      @include transition();
+    }
+
+    &:hover {
+      background-color: $highlight-color;
+      border-right: 1px solid $dark-gray;
+      border-bottom: 1px solid $dark-gray;
+
+      .fa {
+        color: $highlight-color;
+      }
+
+      .bottom {
         color: $header-color;
-        font-size: $medium-size;
       }
     }
 
+    .bottom {
+      @extend %body-text;
+      padding-top: 1em;
+    }
   }
 
 }

@@ -7,22 +7,49 @@ block content
       .sub-header-copy The Galbraith Society is run by passionate engineering students who want to improve academic opportunities at UofT. Our team is structured into three groups, each focused on one of our initiatives.
     .execs-panel
       .container-fluid
-        .row
-          each exec in execs
-            .col-xs-12.col-sm-6
-              .execs-tile
-                if exec.file
-                  .photo-container(style="background-image:url('/assets/images/execs/#{exec.file}')")
-                    .photo-container-accent.div(class="#{exec.type}")
-                else
-                  .photo-container
-                    .fa.fa-user
-                    .photo-container-accent.div(class="#{exec.type}")
-                .right
-                  .name
-                    .panel-header= exec.name
-                  .position= exec.position
-                  .discipline= exec.discipline
-                  .email= exec.email
+          .row
+            each exec in execs
+              .col-xs-12.col-md-6
+                table.execs-tile
+                  tr
+                    if exec.file
+                      td.photo-container(style="background-image:url('/assets/images/execs/#{exec.file}')")
+                    else
+                      td.photo-container
+                        .fa.fa-user
+                    td.right(class="#{exec.type}")
+                      .name
+                        .panel-header= exec.name
+                      .position(class="#{exec.type}")= exec.position
+                      .discipline
+                        .top
+                          .fa(class="fa-#{exec.icon}")
+                        .bottom #{exec.discipline.split(',')[0]}
+                          br
+                          | #{exec.discipline.split(',')[1]}
+                      a(href='mailto:#{exec.email}')
+                        .email
+                          .top
+                            .fa.fa-envelope
+                          .bottom #{exec.email.split('@')[0]} 
+                            br
+                            | @ #{exec.email.split('@')[1]}
+                              
 
-                //- img(src='/assets/images/execs/#{exec.file}')
+              
+
+              //-       if exec.file
+              //-         .photo-container(style="background-image:url('/assets/images/execs/#{exec.file}')")
+              //-           .photo-container-accent.div(class="#{exec.type}")
+              //-       else
+              //-         .photo-container
+              //-           .fa.fa-user
+              //-           .photo-container-accent.div(class="#{exec.type}")
+              //-     .right
+              //-       .name
+              //-         .panel-header= exec.name
+              //-       .position= exec.position
+              //-       .discipline= exec.discipline
+              //-       .email= exec.email
+
+              //- img(src='/assets/images/execs/#{exec.file}')

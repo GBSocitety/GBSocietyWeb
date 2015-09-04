@@ -1,0 +1,33 @@
+extends ./partials/base.jade
+
+block content
+  .rex-page
+    .header-panel.text-center
+      .sub-header REX
+      .sub-header-copy
+        | REX: The Research Experience Program helps students pursue their academic interests by working on a research project with an academic leader at U of T. Projects are available in many areas of engineering from biomedical technology to human factors. Students are encouraged to explore the development and networking opportunities with the program’s receptions and research fair for an in-depth learning experience. 
+        br
+        br
+        | Applications for the 2015-16 school year will open in September.
+    .rex-panel
+      .container-fluid
+        .row
+          each project in projects
+            .col-xs-12.col-md-6.col-lg-4
+              a(href='/rex/#{project.id}')
+                  table.project-tile
+                    tr.title-container
+                      td.panel-header.title= project.title
+                    tr
+                      td
+                        table.bottom-container
+                          tr
+                            td.area(class='#{project.area.toLowerCase().replace(" ", "-")}')= project.area
+                            td.prof= project.prof
+                    tr
+                      td.bottom-accent
+
+                //- 
+                //-   .title-container
+                //-     .panel-header.title= project.title
+                //-   .area= project.area

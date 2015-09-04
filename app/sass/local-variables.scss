@@ -10,9 +10,14 @@ $dark-gray: #282725;
 $light-gray: #f4f4f4;
 $light-gray-accent: darken($light-gray, 15%);
 $white: #fff;
-$blue: #5c97bf;
 $dark-blue: #012833;
+$red: #d91e18;
 $ruby: #a20b28;
+$orange: #f9690e;
+$gold: #f39C12;
+$green: #1E824C;
+$blue: darken(#3498db, 8%);
+$purple: #663399;
 $header-color: #fff;
 $copy-color: $dark-gray;
 $highlight-color: $ruby;
@@ -21,10 +26,9 @@ $small-size: 1.2em;
 $medium-size: 1.5em;
 $large-size: 5em;
 
-$tile-height: 35vh;
+$tile-height: 20vh;
 $border-width: .5em;
 $bgpanel-height: 100vh;
-$nav-height: 10vh;
 $icon-size: 4em;
 $spacer: 3.5em;
 $small-spacer: 2em;
@@ -33,9 +37,17 @@ $buffer: 3em;
 // MISC
 $prefixes: webkit moz ms o;
 $positions: (
-  'co-chair': $blue,
-  'events': green,
-  'rex': yellow,
-  'journal': red,
-  'misc': blue
+  'co-chair': $red,
+  'events': $blue,
+  'rex': $green,
+  'journal': $orange,
+  'misc': $purple
+);
+$areas: (
+  'information-engineering': $red,
+  'operations-research': $blue,
+  'electronics': $orange,
+  'computer-engineering': $green,
+  'photonics': $purple,
+  'civil-engineering': $gold
 );

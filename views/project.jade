@@ -1,0 +1,49 @@
+//- "id":"bikeshare",
+//- "title":"Mining the City of Toronto Bike Share Data",
+//- "description":"Like a number of cities around the world, the City of Toronto is in the process of making the raw data on its Bike Share program (formerly Bixi Bikes) publicly available. I am proposing an open-ended project focused on the analysis of this data and its combination with other publicly available data to address operational, tactical, and strategic management questions for the Bike Share network. The project will encompass diving into and understanding the data, data visualization, the development of interesting questions, identification of other data sources, and the development of data-driven tools (e.g., statistical models, simulations, optimization models) to answer the questions.",
+//- "expectations":"Some example questions that the student should investigate include: Why do some stations empty while at others the arrivals and departures tend to balance? Why are some stations busy while other, close-by stations are not? What is the optimal station size for a given location? What are the best locations? What is the mix of subscription users vs. casual users at a given location and can this be predicted? What is the optimal size of the system? What is the best pricing for subscriptions and casual users?",
+//- "timecommitment":"Flexible",
+//- "credentials":"The students should be in 1st or 2nd year Indy and ECE. Programming experience would be great, but not required.",
+//- "prof":"C. Beck",
+//- "profphoto":"cbeck.jpg",
+//- "bio":"Associate Professor, Industrial Engineering / Computer Science",
+//- "link":"http://tidel.mie.utoronto.ca/",
+//- "areaid":"info",
+//- "area":"Information Engineering",
+//- "student":"4 Positions Vacant"
+extends ./partials/skeleton.jade
+
+block content
+  .project-page
+    .nav-back
+      a(href='/rex')
+        .back-btn
+          .fa.fa-arrow-left
+          | Back
+    .header-panel.text-center
+      .sub-header= project.title
+      .highlight-text(class='#{project.area.toLowerCase().replace(" ", "-")}')= project.area
+    .description-panel= project.description
+    .info-panel
+      .container-fluid
+            each i in ['expectations', 'time-commitment', 'credentials']
+              - var string = i.replace("-", " ")
+              - var title = string.charAt(0).toUpperCase() + string.slice(1)
+              .row.middle-info
+                .col-xs-12.col-sm-3.panel-header= title
+                .col-xs-12.col-sm-9.content= project[i]
+            .col-xs-12.col-sm-6
+              a(href='#{project.link}' target='_blank')
+                table.prof-panel
+                  tr
+                    td.prof-photo(style="background-image:url('#{project.profphoto}')")
+                    td.right
+                      .panel-header.prof-name= project.prof
+                      .prof-bio= project.bio
+            .col-xs-12.col-sm-6
+              .student-panel
+                //- | #{project.student}
+                | Application Not Yet Available
+                br
+                .highlight-text.disabled Coming Soon
+

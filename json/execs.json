@@ -4,7 +4,8 @@
     "name": "Areeba Zakir",
     "position": "Co-Chair",
     "type": "co-chair",
-    "discipline": "IndE 1T6 + PEY",
+    "discipline": "IndE, 1T6 + PEY",
+    "icon": "lightbulb-o",
     "email": "gsociety.uoft@gmail.com"
   },
   {
@@ -12,7 +13,8 @@
     "name": "Asim Datye",
     "position": "Co-Chair",
     "type": "co-chair",
-    "discipline": "CHEM 1T7",
+    "discipline": "CHEM, 1T7",
+    "icon": "flask",
     "email": "gsociety.uoft@gmail.com"
   },
   {
@@ -20,7 +22,8 @@
     "name": "Yufan Li",
     "position": "Co-Director of Events",
     "type": "events",
-    "discipline": "EngSci 1T7",
+    "discipline": "EngSci, 1T7",
+    "icon": "balance-scale",
     "email": "gsociety.events@gmail.com"
   },
   {
@@ -28,7 +31,8 @@
     "name": "Andrew Tan",
     "position": "Co-Director of Events",
     "type": "events",
-    "discipline": "EngSci 1T8",
+    "discipline": "EngSci, 1T8",
+    "icon": "balance-scale",
     "email": "gsociety.events@gmail.com"
   },
   {
@@ -36,7 +40,8 @@
     "name": "Harshita Huria",
     "position": "Co-Director of REX",
     "type": "rex",
-    "discipline": "ECE 1T7",
+    "discipline": "ECE, 1T7",
+    "icon": "bolt",
     "email": "gsociety.rex@gmail.com"
   },
   {
@@ -44,7 +49,8 @@
     "name": "Imran Asghar",
     "position": "Co-Director of REX",
     "type": "rex",    
-    "discipline": "ECE 1T8",
+    "discipline": "ECE, 1T8",
+    "icon": "bolt",    
     "email": "gsociety.rex@gmail.com"
   },
   {
@@ -52,7 +58,8 @@
     "name": "Meghana Padmanabhan",
     "position": "REX Subcommitee",
     "type": "rex",    
-    "discipline": "ECE 1T7",
+    "discipline": "ECE, 1T7",
+    "icon": "bolt",    
     "email": "gsociety.operations@gmail.com"
   },
   {
@@ -60,7 +67,8 @@
     "name": "Abhinav Mohan",
     "position": "Co-Director of Journal",
     "type": "journal",
-    "discipline": "CHEM 1T8",
+    "discipline": "CHEM, 1T8",
+    "icon": "flask",    
     "email": "gsociety.journal@gmail.com"
   },
   {
@@ -68,7 +76,8 @@
     "name": "Daniel Eftekhari",
     "position": "Co-Director of Journal",
     "type": "journal",        
-    "discipline": "EngSci 1T6",
+    "discipline": "EngSci, 1T6",
+    "icon": "balance-scale",    
     "email": "gsociety.journal@gmail.com"
   },
   {
@@ -76,7 +85,8 @@
     "name": "Elana Sefton",
     "position": "Editor in Chief, Journal",
     "type": "journal",        
-    "discipline": "4th year LifeSci",
+    "discipline": "4th Yr, LifeSci",
+    "icon": "heart",    
     "email": "gsociety.journal@gmail.com"
   },
   {
@@ -84,14 +94,16 @@
     "name": "Sowmya Tata",
     "position": "Director of Promotions",
     "type": "misc",
-    "discipline": "EngSci 1T7",
+    "discipline": "EngSci, 1T7",
+    "icon": "balance-scale",        
     "email": "gsociety.promotions@gmail.com"
   },
   {
     "file": "",
     "name": "Marcus Tan",
     "position": "Webmaster",
-    "discipline": "2nd year CompSci",
+    "discipline": "2nd Yr, CompSci",
+    "icon": "code-fork",            
     "type": "misc",    
     "email": "gsociety.webmaster@gmail.com"
   }

@@ -43,7 +43,6 @@ body {
   font-family: $copy-font, sans-serif;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
 }
 
 a {
@@ -59,12 +58,18 @@ a {
 }
 
 .highlight-text {
+  @include transition();
   @extend %logistics-text;
   display: inline-block;
-  background-color: $highlight-color;
+  background-color: $dark-gray;
   margin: 1em auto;
   padding: .5em $small-spacer;
   text-transform: uppercase;
+
+  &:hover{
+    color: $header-color;
+    background-color: $highlight-color;
+  }
 }
 
 .category-panel {
@@ -102,7 +107,7 @@ a {
 }
 
 .panel-header {
-  @include fonts($header-font, 400, $medium-size + .5em, $copy-color);
+  @include fonts($header-font, 400, $medium-size, $copy-color);
 }
 
 %body-text {
