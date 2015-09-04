@@ -15,11 +15,13 @@ extends ./partials/skeleton.jade
 
 block content
   .project-page
-    .nav-back
-      a(href='/rex')
-        .back-btn
-          .fa.fa-arrow-left
-          | Back
+    table.nav-back
+      tr
+        td
+          a(href='/rex')
+            .item.back-btn
+              .fa.fa-arrow-left
+              | Back
     .header-panel.text-center
       .sub-header= project.title
       .highlight-text(class='#{project.area.toLowerCase().replace(" ", "-")}')= project.area

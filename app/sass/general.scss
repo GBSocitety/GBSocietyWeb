@@ -76,6 +76,29 @@ a {
   padding: $spacer 0;
 }
 
+.year-panel {
+  @extend %logistics-text;
+  background-color: $dark-gray;
+  width: 100%;
+}
+
+.year-tile {
+  @include transition();
+  background-color: $dark-gray;
+
+  &.active {
+    background-color: $gray;
+  }
+
+  &:hover {
+    background-color: $gray
+  }
+
+  a {
+    color: $header-color;
+  }
+}
+
 %equal-row {
   display: table;
   border: none;
@@ -123,6 +146,11 @@ a {
   letter-spacing: .5px;
 }
 
+// navbar item
+.item {
+  padding: .8em 1.2em;
+}
+
 .nav-bar {
   @extend %nav-text;
   @include transition();
@@ -131,20 +159,30 @@ a {
   width: 100%;
   z-index: 1000;
 
+  a {
+    color: $header-color;
+  }
+
   .left {
+    @include transition();
     float: left;
+    background-color: $dark-gray;
+
+    &:hover {
+      background-color: lighten($dark-gray, 10%);
+    }
   }
 
   .right {
     float: right;
   }
 
-  .item {
-    display: inline-block;    
-    margin: .5em;
+  .inner-right {
+    @include transition();
+    float: left;
 
-    &:hover a {
-      color: $highlight-color;
+    &:hover {
+      background-color: lighten($gray, 10%);
     }
   }
 }
@@ -156,12 +194,16 @@ a {
   border-left: $spacer solid $dark-gray;
   color: $header-color;
 
+  a {
+    @include transition();
+  }
+
   .pull-left .fa {
     padding: 0 .5em;
   }
 
   .pull-right .fa {
-    font-size: $small-size;
+    font-size: $medium-size;
     margin: 0 .5em;
   }
 }

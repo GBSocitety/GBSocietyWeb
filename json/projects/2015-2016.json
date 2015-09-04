@@ -1,0 +1,16 @@
+[
+    {
+        "id":"test",
+        "title":"Test Event",
+        "description":"Like a number of cities around the world, the City of Toronto is in the process of making the raw data on its Bike Share program (formerly Bixi Bikes) publicly available. I am proposing an open-ended project focused on the analysis of this data and its combination with other publicly available data to address operational, tactical, and strategic management questions for the Bike Share network. The project will encompass diving into and understanding the data, data visualization, the development of interesting questions, identification of other data sources, and the development of data-driven tools (e.g., statistical models, simulations, optimization models) to answer the questions.",
+        "expectations":"Some example questions that the student should investigate include: Why do some stations empty while at others the arrivals and departures tend to balance? Why are some stations busy while other, close-by stations are not? What is the optimal station size for a given location? What are the best locations? What is the mix of subscription users vs. casual users at a given location and can this be predicted? What is the optimal size of the system? What is the best pricing for subscriptions and casual users?",
+        "time-commitment":"Flexible",
+        "credentials":"The students should be in 1st or 2nd year Indy and ECE. Programming experience would be great, but not required.",
+        "prof":"C. Beck",
+        "profphoto":"http://www.mie.utoronto.ca/faculty/beck/beck.jpg",
+        "bio":"Associate Professor, Industrial Engineering / Computer Science",
+        "link":"http://tidel.mie.utoronto.ca/",
+        "area":"Information Engineering",
+        "student":"4 Positions Vacant"
+    }
+]

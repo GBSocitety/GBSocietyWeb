@@ -371,24 +371,31 @@
 
   .nav-back {
     @extend %nav-text;
-    @include transition();
-    // position: fixed;
+    background-color: $gray;
     width: 100%;
-    z-index: 1000;
+
+    a {
+      color: $header-color;
+
+      &:hover .back-btn{
+        background-color: lighten($dark-gray, 10%);
+      }
+    }
   }
 
   .back-btn {
+    @include transition();
     float: left;
     background-color: $dark-gray;
-    padding: 1em;
 
     .fa {
-      color: $dark-gray;
+      padding-right: .8em;
+      color: $header-color;
     }
   }
 
   .header-panel {
-    @include bgpanel($gray);
+    @include bgpanel(lighten($gray,10%));
 
     .sub-header {
       color: $header-color;

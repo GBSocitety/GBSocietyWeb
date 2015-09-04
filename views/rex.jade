@@ -9,12 +9,23 @@ block content
         br
         br
         | Applications for the 2015-16 school year will open in September.
+    table.year-panel
+      tr.text-center
+        each year in years
+          - var res = year.split('.')[0]
+          if res === thisYear
+            td.year-tile.active
+              .item= res
+          else
+            td.year-tile
+              a(href='/rex/#{res}')
+                .item= res
     .rex-panel
       .container-fluid
         .row
           each project in projects
             .col-xs-12.col-md-6.col-lg-4
-              a(href='/rex/#{project.id}')
+              a(href='/rex/#{thisYear}/#{project.id}')
                   table.project-tile
                     tr.title-container
                       td.panel-header.title= project.title

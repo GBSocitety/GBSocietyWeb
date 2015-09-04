@@ -1,16 +1,19 @@
 extends ./skeleton.jade
 
 block top
-  .nav-bar
-    .container-fluid
-      .left
-        .item
-          a(href='/')
-            .fa.fa-home
-      .right
-        each item in ['REX', 'Events', 'Journal', 'Contact']
+  table.nav-bar
+    tr
+      td.left
+        a(href='/')        
           .item
-            a(href='/#{item.toLowerCase()}')= item
+            .fa.fa-home
+      td.right
+        table
+          tr
+            each item in ['REX', 'Events', 'Journal', 'Contact']
+              td.inner-right
+                a(href='/#{item.toLowerCase()}')
+                  .item= item
 block content
 block bottom
   .footer

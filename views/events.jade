@@ -5,6 +5,17 @@ block content
     .header-panel.text-center
       .sub-header Events
       .sub-header-copy The Galbraith Society hosts events including workshops and symposiums to teach students useful skills and promote current leading research. In previous years, we have introduced some of the most sought-after software skills including: MATLAB, SolidWorks, and AutoCAD, and encouraged students to innovate with symposia on biomedical research and project management. Check this page for the latest news on upcoming events throughout the school year.
+    table.year-panel
+      tr.text-center
+        each year in years
+          - var res = year.split('.')[0]
+          if res === thisYear
+            td.year-tile.active
+              .item= res
+          else
+            td.year-tile
+              a(href='/events/#{res}')
+                .item= res
     .event-panel  
       .container-fluid
         .row
