@@ -1,0 +1,1 @@
+var i="asdf";console.log(i?"hello":"asdf");
