@@ -14,8 +14,10 @@
 .index-page {
 
   .header-panel {
-    @include bgimage-gradient('bg.jpg', .75, 0);
-    background-size: cover;
+    // @include bgimage-gradient('bg.jpg', .75, 0);
+    @include bgimage-gradient('bg3.png', .2, .2);
+    background-repeat: repeat;
+    background-size: 90%;
     min-height: 40vh;
 
     .title-panel {
@@ -369,33 +371,34 @@
 .project-page {
   min-height: $bgpanel-height;
 
-  .nav-back {
-    @extend %nav-text;
-    background-color: $gray;
-    width: 100%;
+  // .nav-back {
+  //   @extend %nav-text;
+  //   background-color: $gray;
+  //   width: 100%;
 
-    a {
-      color: $header-color;
+  //   a {
+  //     color: $header-color;
 
-      &:hover .back-btn{
-        background-color: lighten($dark-gray, 10%);
-      }
-    }
-  }
+  //     &:hover .back-btn{
+  //       background-color: lighten($dark-gray, 10%);
+  //     }
+  //   }
+  // }
 
-  .back-btn {
-    @include transition();
-    float: left;
-    background-color: $dark-gray;
+  // .back-btn {
+  //   @include transition();
+  //   float: left;
+  //   background-color: $dark-gray;
 
-    .fa {
-      padding-right: .8em;
-      color: $header-color;
-    }
-  }
+  //   .fa {
+  //     padding-right: .8em;
+  //     color: $header-color;
+  //   }
+  // }
 
   .header-panel {
     @include bgpanel(lighten($gray,10%));
+    padding-top: $header-spacer + $spacer;
 
     .sub-header {
       color: $header-color;
@@ -517,15 +520,21 @@
     z-index: 0;
   }
 
-  .slide-in {
+  .journal-bg {
     @include transition();
     z-index: 50;
     position: absolute;
     height: 100%;
     width: 80%;
     top: 0;
-    left: -80%;
-    background-color: $blue;
+    left: 10%;
+    // background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('http://www.skrenta.com/images/stackoverflow.jpg') no-repeat;
+    // background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(59%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.65))), url('http://www.skrenta.com/images/stackoverflow.jpg') no-repeat;
+    // background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('http://www.skrenta.com/images/stackoverflow.jpg') no-repeat;
+    // background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('http://www.skrenta.com/images/stackoverflow.jpg') no-repeat;
+    // background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 59%, rgba(0, 0, 0, 0.65) 100%), url('http://www.skrenta.com/images/stackoverflow.jpg') no-repeat;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 50%), url('http://www.vetprofessionals.com/catprofessional/images/home-cat.jpg');
+    background-size: 100% 205%;
   }
 
   .journal-portal {
@@ -597,7 +606,6 @@
   }
 
 }
-
 
 // CONTACT
 .contact-page {

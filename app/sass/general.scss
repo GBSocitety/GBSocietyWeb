@@ -78,20 +78,19 @@ a {
 
 .year-panel {
   @extend %logistics-text;
-  background-color: $dark-gray;
   width: 100%;
 }
 
 .year-tile {
   @include transition();
-  background-color: $dark-gray;
+  background-color: $gray;
 
   &.active {
-    background-color: $gray;
+    background-color: $dark-gray;
   }
 
-  &:hover {
-    background-color: $gray
+  &:not(.active):hover {
+    background-color: $highlight-color;
   }
 
   a {
@@ -171,7 +170,17 @@ a {
     &:hover {
       background-color: lighten($dark-gray, 10%);
     }
+
+    .item {
+      padding: .3em 1em;
+    }
+
+    img {
+      height: 50px;
+    }
   }
+
+
 
   .right {
     float: right;

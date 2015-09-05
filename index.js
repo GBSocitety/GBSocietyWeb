@@ -30,7 +30,7 @@ app.get('/rex/:year', function (req, res) {
   var render = require('./json/projects/' + year + '.json');
   fs.readdir('./json/projects',function(err,years){
     if(err) throw err;
-    res.render('rex', { title: 'REX', projects: render, years: years, thisYear: year});
+    res.render('rex', { title: 'Galbraith Society - REX', projects: render, years: years, thisYear: year});
   });  
 });
 
@@ -39,7 +39,7 @@ app.get('/rex/:year/:project', function (req, res) {
   var id = req.params.project;
   projects.forEach(function(project){
     if (project.id == id){
-      res.render('project', { title: 'REX', project: project});      
+      res.render('project', { title: 'Galbraith Society - ' + id, project: project});      
     }
   })
 });
@@ -57,20 +57,20 @@ app.get('/events/:year', function (req, res) {
   var render = require('./json/events/' + year + '.json');
   fs.readdir('./json/events',function(err,years){
     if(err) throw err;
-    res.render('events', { title: 'Events', events: render, years: years, thisYear: year});
+    res.render('events', { title: 'Galbraith Society - Events', events: render, years: years, thisYear: year});
   });
 });
 
 
 app.get('/journal', function (req, res) {
-  res.render('journal', { title: 'Undergraduate Journal'});
+  res.render('journal', { title: 'Galbraith Society - Journal'});
 });
 
 
 app.get('/contact', function (req, res) {
-  res.render('contact', { title: 'Contact', execs: execs});
+  res.render('contact', { title: 'Galbraith Society - Contact', execs: execs});
 });
 
-app.listen(process.env.PORT || 3000, function(){
+app.listen(process.env.PORT || 4000, function(){
 	console.log('listening');
 });
