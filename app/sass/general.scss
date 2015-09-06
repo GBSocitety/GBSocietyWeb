@@ -30,9 +30,9 @@
 
 @mixin bgimage-gradient($img, $top, $bottom) {
   @each $prefix in $prefixes {
-    background: #{$prefix}-linear-gradient(rgba(0, 0, 0, $top), rgba(0, 0, 0, $bottom)), url('images/#{$img}') center center no-repeat;
+    background: #{$prefix}-linear-gradient(rgba(0, 0, 0, $top), rgba(0, 0, 0, $bottom)), url('images/#{$img}');
   }
-  background: linear-gradient(rgba(0, 0, 0, $top), rgba(0, 0, 0, $bottom)), url('images/#{$img}') center center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, $top), rgba(0, 0, 0, $bottom)), url('images/#{$img}');
 }
 
 // GENERAL STYLES ---------------------------------------------------------------------
