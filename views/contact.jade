@@ -13,7 +13,10 @@ block content
                 table.execs-tile
                   tr
                     if exec.file
-                      td.photo-container(style="background-image:url('/assets/images/execs/#{exec.file}')")
+                      if exec.imgPosition
+                        td.photo-container(style="background-image:url('/assets/images/execs/#{exec.file}'); background-position:#{exec.imgPosition}")
+                      else
+                        td.photo-container(style="background-image:url('/assets/images/execs/#{exec.file}')")
                     else
                       td.photo-container
                         .fa.fa-user

@@ -13,10 +13,28 @@
     "name": "Asim Datye",
     "position": "Co-Chair",
     "type": "co-chair",
-    "discipline": "CHEM, 1T7",
+    "discipline": "Chem, 1T7",
     "icon": "flask",
     "email": "gsociety.uoft@gmail.com"
   },
+  {
+    "file": "sowmya.jpg",
+    "name": "Sowmya Tata",
+    "position": "Director of Promotions",
+    "type": "misc",
+    "discipline": "EngSci, 1T7",
+    "icon": "balance-scale",        
+    "email": "gsociety.promotions@gmail.com"
+  },
+  {
+    "file": "",
+    "name": "Marcus Tan",
+    "position": "Webmaster",
+    "discipline": "2nd Yr, CompSci",
+    "icon": "code-fork",            
+    "type": "misc",    
+    "email": "gsociety.webmaster@gmail.com"
+  },  
   {
     "file": "yufan.jpg",
     "name": "Yufan Li",
@@ -63,11 +81,30 @@
     "email": "gsociety.operations@gmail.com"
   },
   {
+    "file": "liam.jpg",
+    "name": "Liam D'Souza",
+    "position": "REX Subcommitee",
+    "type": "rex",
+    "discipline": "EngSci, 1T8",
+    "icon": "balance-scale",        
+    "email": "gsociety.rex@gmail.com"
+  },
+  {
+    "file": "jack.jpg",
+    "name": "Jack Han",
+    "position": "REX Subcommitee",
+    "type": "rex",        
+    "discipline": "Mech, 1T8",
+    "icon": "cog",
+    "email": "gsociety.rex@gmail.com",
+    "imgPosition": "right"
+  },  
+  {
     "file": "abhinav.jpg",
     "name": "Abhinav Mohan",
     "position": "Co-Director of Journal",
     "type": "journal",
-    "discipline": "CHEM, 1T8",
+    "discipline": "Chem, 1T8",
     "icon": "flask",    
     "email": "gsociety.journal@gmail.com"
   },
@@ -79,32 +116,5 @@
     "discipline": "EngSci, 1T6",
     "icon": "balance-scale",    
     "email": "gsociety.journal@gmail.com"
-  },
-  {
-    "file": "",
-    "name": "Elana Sefton",
-    "position": "Editor in Chief, Journal",
-    "type": "journal",        
-    "discipline": "Chem + Cell Bio, 1T6",
-    "icon": "heart",    
-    "email": "gsociety.journal@gmail.com"
-  },
-  {
-    "file": "sowmya.jpg",
-    "name": "Sowmya Tata",
-    "position": "Director of Promotions",
-    "type": "misc",
-    "discipline": "EngSci, 1T7",
-    "icon": "balance-scale",        
-    "email": "gsociety.promotions@gmail.com"
-  },
-  {
-    "file": "",
-    "name": "Marcus Tan",
-    "position": "Webmaster",
-    "discipline": "2nd Yr, CompSci",
-    "icon": "code-fork",            
-    "type": "misc",    
-    "email": "gsociety.webmaster@gmail.com"
   }
 ]
