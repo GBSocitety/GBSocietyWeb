@@ -15,8 +15,10 @@ $red: #d91e18;
 $ruby: #a20b28;
 $orange: #f9690e;
 $gold: #f39C12;
+$yellow: #F7CA18;
 $green: #1E824C;
 $blue: darken(#3498db, 8%);
+$blue2: #1F3A93;
 $purple: #663399;
 $header-color: #fff;
 $copy-color: $dark-gray;
@@ -49,5 +51,11 @@ $areas: (
   'electronics': $orange,
   'computer-engineering': $green,
   'photonics': $purple,
-  'civil-engineering': $gold
+  'civil-engineering': $gold,
+  'computer-science': $orange,
+  'biomedical-engineering': $blue2,
+  'engineering-education': $purple,
+  'mechanical-engineering': $gold,
+  'chemical-engineering': $blue,
+  'atmospheric-physics': $green
 );

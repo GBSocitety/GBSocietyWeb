@@ -1,1 +1,1 @@
-var i="asdf";i?console.log("hello"):console.log("asdf");
+var i="asdf";console.log(i?"hello":"asdf");
