@@ -506,11 +506,35 @@
       }
     }
 
+    .sub-header-copy {
+      text-align: left;
+    }
+
     .highlight-text {
       background-color: $highlight-color;
 
       &:hover {
         background-color: lighten($highlight-color, 10%);
+      }
+    }
+
+    .requirements-panel {
+      margin-top: 1em;
+      padding: 1em;
+
+      .points td{
+        color: $dark-gray;
+        padding: 1em;
+        text-align: left;
+
+        &.text {
+          @extend %body-text;
+        }
+
+        &.fa {
+          display: table-cell;
+          vertical-align: middle;
+        }
       }
     }
   }
