@@ -498,7 +498,7 @@
     @include bgpanel($light-gray);
     padding-top: $header-spacer + $spacer;
 
-    a {
+    a#inline{
       color: $dark-gray;
 
       &:hover {
@@ -509,32 +509,25 @@
     .sub-header-copy {
       text-align: left;
     }
+  }
 
-    .highlight-text {
-      background-color: $highlight-color;
-
-      &:hover {
-        background-color: lighten($highlight-color, 10%);
-      }
-    }
-
-    .requirements-panel {
-      margin-top: 1em;
+  .read-panel {
+    background-color: $dark-blue;
+    .left,.right {
       padding: 1em;
+    }
+    .left {
+      @extend %logistics-text;
+      text-align: right;
+      text-transform: uppercase;
+      color: $white;
+    }
+    .right {
+      @extend %body-text;
+      text-align: left;
 
-      .points td{
-        color: $dark-gray;
-        padding: 1em;
-        text-align: left;
-
-        &.text {
-          @extend %body-text;
-        }
-
-        &.fa {
-          display: table-cell;
-          vertical-align: middle;
-        }
+      a:hover {
+        color: $white;
       }
     }
   }
