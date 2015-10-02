@@ -1,11 +1,11 @@
 [
   {
-    "id":"test",
-    "title":"test",
-    "description":"No Events Here Yet!",
-    "link":"",
-    "date":"Feb.26",
-    "time":"6:00 - 8:00 pm",
-    "location":"GB 144"
+    "id":"gradschwrkshp",
+    "title":"Galbraith Society Graduate School Workshop",
+    "description":"The Galbraith Society is hosting a Graduate School Workshop to provide undergraduate engineering students with insight into the grad school experience. Graduate students with a diverse set of background will be sharing their experience regarding the application process, and life during and after graduate school. If you're considering grad school then this event is for you! Come out to GB202 on October 16th from 5:30-7:00pm to learn and get tips on grad school life. *Food will be provided",
+    "link":"https://www.facebook.com/events/1074799305866380/",
+    "date":"Oct.16",
+    "time":"5:30 - 7:00 PM",
+    "location":"GB 202"
   }
 ]
