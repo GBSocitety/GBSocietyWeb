@@ -6,12 +6,26 @@
         "time-commitment":"2-3 Hours/Week",
         "expectations":"Conduct feasibility tests of electrically activating peripheral nerves in human participants.",
         "credentials":"Any year and discipline.",
-        "prof":"P. Yoo",
+        "prof":"J. Zariffa",
         "profphoto":"http://ibbme.utoronto.ca/wp-content/uploads/2013/08/Paul-Yoo-133x200.jpg",
         "bio":"Associate Professor, Biomaterials & Biomedical Engineering / Electrical & Computer Engineering",
         "link":"http://www.ibbme.utoronto.ca/faculty/core-faculty/paul-yoo/",
         "area":"Biomedical Engineering",
         "student":"3-5 positions available"
+    },
+    {
+        "id":"neuralstim",
+        "title":"Personalized Neural Stimulation/Recording Headset",
+        "description":"Therapeutic brain stimulation is a rapidly advancing field within neuroscience and medicine. The effectiveness of the technique requires accurate localization of the target brain regions for recording and/or stimulation for various clinical and experimental procedures. However, individual variation in skull anatomy and size causes it to be difficult to consistently locate a specific region for multiple recording/stimulation sessions. Image guided placement methods of recorders/stimulators such as MRIs, are expensive and time consuming. Manual methods such as tape measurements are time consuming, require a technician, and lack consistency for multiple recording/stimulation sessions. Our project will improve upon existing techniques, minimizing time and expense while ensuring accuracy and consistency of neural recording/stimulation. A personalized stimulation headset will be 3D printed that targets the desired brain region for that patient. The method begins by using a series of digital photos of the patient to create a 3D model of their head. Using a computer algorithm, a personalized headset locating the target area will be 3D printed to fit the patient’s head and pinpoint the target region.",
+        "time-commitment":"4-6 Hours/Week",
+        "expectations":"Headset design specific for repetitive transcranial stimulation (rTMS), Software design and implementation allowing to scan and print the headset, Testing of both the headset and the software",
+        "credentials":"Any year and discipline, as long as the student is motivated.",
+        "prof":"J. Zariffa",
+        "profphoto":"http://ibbme.utoronto.ca/wp-content/uploads/2013/08/Paul-Yoo-133x200.jpg",
+        "bio":"Assistant Professor, Biomaterials & Biomedical Engineering / Electrical & Computer Engineering",
+        "link":"http://www.neuroscience.utoronto.ca/Assets/Neuroscience+Digital+Assets/Neuroscience/UTNP+Digital+Assets/images/faculty/zariffa.jpg",
+        "area":"Biomedical Engineering",
+        "student":"2-4 positions available"
     },
     {
         "id":"globalclim",
