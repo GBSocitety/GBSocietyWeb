@@ -31,13 +31,14 @@ block content
                           br
                           | #{exec.discipline.split(',')[1]}
                       a(href='mailto:#{exec.email}')
-                        .email
-                          .top
-                            .fa.fa-envelope
-                          .bottom #{exec.email.split('@')[0]} 
-                            br
-                            | @ #{exec.email.split('@')[1]}
-                              
+                        if exec.email
+                          .email
+                            .top
+                              .fa.fa-envelope
+                            .bottom #{exec.email.split('@')[0]} 
+                              br
+                              | @ #{exec.email.split('@')[1]}
+                        else                          
 
               
 

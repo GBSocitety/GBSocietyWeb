@@ -74,29 +74,29 @@
   {
     "file": "meghana.jpg",
     "name": "Meghana Padmanabhan",
-    "position": "REX Subcommitee",
+    "position": "REX Subcommittee",
     "type": "rex",    
     "discipline": "ECE, 1T7",
     "icon": "bolt",    
-    "email": "gsociety.operations@gmail.com"
+    "email": ""
   },
   {
     "file": "liam.jpg",
     "name": "Liam D'Souza",
-    "position": "REX Subcommitee",
+    "position": "REX Subcommittee",
     "type": "rex",
     "discipline": "EngSci, 1T8",
     "icon": "balance-scale",        
-    "email": "gsociety.rex@gmail.com"
+    "email": ""
   },
   {
     "file": "jack.jpg",
     "name": "Jack Han",
-    "position": "REX Subcommitee",
+    "position": "REX Subcommittee",
     "type": "rex",        
     "discipline": "Mech, 1T8",
     "icon": "cog",
-    "email": "gsociety.rex@gmail.com",
+    "email": "",
     "imgPosition": "right"
   },  
   {

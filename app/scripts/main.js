@@ -1,10 +1,10 @@
-var i = 'asdf';
+// var i = 'asdf';
 // comment or some thign
-  if (i) {
-    console.log('hello');
-  } else {
-    console.log('asdf');
-  }
+  // if (i) {
+  //   console.log('hello');
+  // } else {
+  //   console.log('asdf');
+  // }
 
 // http://stackoverflow.com/questions/11777598/font-size-relative-to-the-users-screen-resolution
 // function doResize()
