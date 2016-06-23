@@ -2,119 +2,97 @@
   {
     "file": "areeba.jpg",
     "name": "Areeba Zakir",
-    "position": "Co-Chair",
+    "position": "Chair",
     "type": "co-chair",
     "discipline": "IndE, 1T6 + PEY",
     "icon": "lightbulb-o",
     "email": "gsociety.uoft@gmail.com"
   },
   {
-    "file": "asim.jpg",
-    "name": "Asim Datye",
-    "position": "Co-Chair",
-    "type": "co-chair",
-    "discipline": "Chem, 1T7",
-    "icon": "flask",
-    "email": "gsociety.uoft@gmail.com"
-  },
-  {
     "file": "sowmya.jpg",
     "name": "Sowmya Tata",
-    "position": "Director of Promotions",
+    "position": "VP Promotions",
     "type": "misc",
-    "discipline": "EngSci, 1T7",
+    "discipline": "EngSci, 1T7 + PEY",
     "icon": "balance-scale",        
     "email": "gsociety.promotions@gmail.com"
   },
+
   {
     "file": "",
-    "name": "Marcus Tan",
+    "name": "Isabelle Zhang",
+    "position": "VP Finance",
+    "type": "misc",
+    "discipline": "IndE, 1T9",
+    "icon": "lightbulb-o",        
+    "email": "gsociety.operations@gmail.com"
+  },
+
+  {
+    "file": "roger.jpg",
+    "name": "Roger Luo",
     "position": "Webmaster",
-    "discipline": "2nd Yr, CompSci",
-    "icon": "code-fork",            
+    "discipline": "IndE, 1T6",
+    "icon": "lightbulb-o",            
     "type": "misc",    
     "email": "gsociety.webmaster@gmail.com"
   },  
   {
-    "file": "yufan.jpg",
-    "name": "Yufan Li",
+    "file": "mishael.jpg",
+    "name": "Mishael Nuh",
     "position": "Co-Director of Events",
     "type": "events",
-    "discipline": "EngSci, 1T7",
+    "discipline": "EngSci, 1T9",
     "icon": "balance-scale",
     "email": "gsociety.events@gmail.com"
   },
   {
-    "file": "andrew.jpg",
-    "name": "Andrew Tan",
+    "file": "",
+    "name": "Netra Rajesh",
     "position": "Co-Director of Events",
     "type": "events",
-    "discipline": "EngSci, 1T8",
+    "discipline": "EngSci, 1T9",
     "icon": "balance-scale",
     "email": "gsociety.events@gmail.com"
-  },
-  {
-    "file": "harshita.jpg",
-    "name": "Harshita Huria",
-    "position": "Co-Director of REX",
-    "type": "rex",
-    "discipline": "ECE, 1T7",
-    "icon": "bolt",
-    "email": "gsociety.rex@gmail.com"
-  },
-  {
-    "file": "imran.jpg",
-    "name": "Imran Asghar",
-    "position": "Co-Director of REX",
-    "type": "rex",    
-    "discipline": "ECE, 1T8",
-    "icon": "bolt",    
-    "email": "gsociety.rex@gmail.com"
-  },
-  {
-    "file": "meghana.jpg",
-    "name": "Meghana Padmanabhan",
-    "position": "REX Subcommittee",
-    "type": "rex",    
-    "discipline": "ECE, 1T7",
-    "icon": "bolt",    
-    "email": ""
   },
   {
     "file": "liam.jpg",
     "name": "Liam D'Souza",
-    "position": "REX Subcommittee",
+    "position": "Co-Director of REX",
     "type": "rex",
     "discipline": "EngSci, 1T8",
-    "icon": "balance-scale",        
-    "email": ""
+    "icon": "balance-scale",
+    "email": "gsociety.rex@gmail.com"
   },
+
   {
-    "file": "jack.jpg",
-    "name": "Jack Han",
-    "position": "REX Subcommittee",
-    "type": "rex",        
-    "discipline": "Mech, 1T8",
-    "icon": "cog",
-    "email": "",
-    "imgPosition": "right"
-  },  
+    "file": "mohit.jpg",
+    "name": "Mohit Verma",
+    "position": "Co-Director of REX",
+    "type": "rex",
+    "discipline": "EngSci, 1T9",
+    "icon": "balance-scale",
+    "email": "gsociety.rex@gmail.com"
+  },
+
+  {
+    "file": "",
+    "name": "Chang Yeon Woo",
+    "position": "REX Subcomm",
+    "type": "rex",
+    "discipline": "EngSci, 1T9",
+    "icon": "balance-scale",
+    "email": "nicholas.woo@mail.utoronto.ca"
+  },
+
   {
     "file": "abhinav.jpg",
     "name": "Abhinav Mohan",
     "position": "Co-Director of Journal",
     "type": "journal",
-    "discipline": "Chem, 1T8",
+    "discipline": "ChemE, 1T8",
     "icon": "flask",    
     "email": "gsociety.journal@gmail.com"
-  },
-  {
-    "file": "daniel.jpg",
-    "name": "Daniel Eftekhari",
-    "position": "Co-Director of Journal",
-    "type": "journal",        
-    "discipline": "EngSci, 1T6",
-    "icon": "balance-scale",    
-    "email": "gsociety.journal@gmail.com"
   }
+  
 ]
